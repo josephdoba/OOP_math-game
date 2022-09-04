@@ -33,6 +33,7 @@ Thanks for playing!
 ## Game-state Class:
   - should manage who the `active_player` is, player one going first.
   - contains the game loop, and checks at the end of every round if the win condition has been met (a players' lives equal to 0 out of three, and announcing the winner)
+  - holds' all other in game messages
   
 ## Calculations class:
   - sets lives total
