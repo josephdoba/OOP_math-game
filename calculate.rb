@@ -1,3 +1,1 @@
-class Calculate
-  @@
-end
+puts "Hello from calculate"
