@@ -26,18 +26,15 @@ Thanks for playing!
 # Nouns for classes: 
 
 ## Player Class:
-
-- should be able to accept the users input (use `gets.chomp`)
-- should hold how many lives remaining
+  - sets lives total
+  - should be able to accept the users input (use `gets.chomp`)
+  - should hold how many lives remaining
+  - should deduct lives when an incorrect guess was made.
+  - should be able to check if the answer provided by the user was an integer.
 
 ## Game-state Class:
+  - should be able to generate numbers to add between 1-20 (use `rand(1..20)`).
   - should manage who the `active_player` is, player one going first.
   - contains the game loop, and checks at the end of every round if the win condition has been met (a players' lives equal to 0 out of three, and announcing the winner)
   - holds' all other in game messages
-  
-## Calculations class:
-  - sets lives total
-  - should be able to generate numbers to add between 1-20 (use `rand(1..20)`).
-  - should be able to check if the answer provided by the user was an integer.
   - should be able to compare the result of the active players' input, to the sum of the numbers generated.
-  - should deduct lives when an incorrect guess was made.

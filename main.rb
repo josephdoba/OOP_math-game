@@ -1,6 +1,5 @@
 require "./player.rb"
 require "./game-state.rb"
-require "./calculate.rb"
 
 jacob = Player.new("Jacob")
 coleen = Player.new("Coleen")
