@@ -5,7 +5,10 @@ jacob = Player.new("Jacob")
 coleen = Player.new("Coleen")
 
 puts jacob
-puts jacob.player_info
 
 puts coleen
-puts coleen.player_info
+
+
+game = GameState.new
+
+game.seed_question
