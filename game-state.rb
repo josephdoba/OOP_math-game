@@ -8,15 +8,30 @@ class GameState
     @@active_game = true
   end
   
+  def player_answer_check(answer)
+    puts answer
+    puts answer.is_a? Integer
+    
+    # if answer.is_a?(Integer) then puts answer.is_a?(Integer)
+      # puts "#{answer} is an integer" 
+      # else puts "#{answer} is not an integer. Try again"
+    # end
+  end
+
+
+  
   def seed_question
-    include player_answer_check
     n1 = rand(1..20)
     n2 = rand(1..20)
-    @correct_answer = n1 + n2
+    correct_answer = n1 + n2
     
     puts "--- NEW TURN --- "
     puts "Player 1: What is #{n1} + #{n2}?"
-    player_answer = gets.chomp
+    player_answer = Integer(gets.chomp)
+
+    # If wrong type of input, repeat the question above
+
+    # if an integer, check if the answer is correct
     
     if player_answer_check(player_answer) == true
       if player_answer == correct_answer
@@ -25,14 +40,7 @@ class GameState
         puts "Wrong! lose a point"
       end
     end
-
-    def player_answer_check(answer)
-      @answer = get.chomp(answer)
-      if @answer.is_a? Integer then "Whoops, entered the wrong input. Try again" else return true end
     end
-    
-
-  end
 
   
   def next_turn(active, next_player)
@@ -54,4 +62,5 @@ class GameState
   end
 
 end
+
 end
