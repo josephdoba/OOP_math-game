@@ -6,20 +6,29 @@ class Player
 
   def initialize(name)
     @@number_of_players += 1
+    @name = name
     @points = 3
     @player_id = @@number_of_players
   end
   
   def points
-    return @points
+    @points
   end
-  
+
+  def name
+    @name
+  end
+
   def player_id
-    return @player_id
+    @player_id
+  end
+
+  def deduct_point
+    @points -= 1
   end
 
   def player_info
-    "player #{player_id()} and has #{points()} point(s) remaining"
+    "Player #{player_id()} and has #{points()} point(s) remaining"
   end
 
 
