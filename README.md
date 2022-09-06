@@ -26,14 +26,13 @@ Thanks for playing!
 # Nouns for classes: 
 
 ## Player Class:
-  - sets points total
-  - sets initial points hold how many points remaining
-  - sets 
-  - allows for `game-state.rb` to 
+  - sets the initial points total, name, and player_id.
+  - allows for `game-state.rb` to reference the player class.
+  - holds a method to deduct points from the player.
 
 ## Game-state Class:
-  - should be able to generate numbers to add between 1-20 (use `rand(1..20)`).
+  - should be able to generate math questions.
   - should manage who the `active_player` is, player one going first.
   - contains the game loop, and checks at the end of every answer if the win condition has been met (a players' points equal to 0, and announcing the winner)
-  - holds' all other in game messages
   - should be able to compare the result of the active players' input, to the sum of the numbers generated.
+  - holds' all other in-game messages
