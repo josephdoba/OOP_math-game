@@ -20,7 +20,8 @@ class GameState
   
   def game_end
     if @@active_game == false
-      puts "Player #{@@passive_player.player_id} wins with #{@@passive_player.player_id} point(s) remaining"
+      puts "--- GAME OVER ---"
+      puts "#{@@active_player.name} (Player #{@@active_player.player_id}) wins with #{@@active_player.player_id} point(s) remaining"
     end
   end
   
@@ -31,7 +32,7 @@ class GameState
   def check_win_condition
     puts "checking the win condition"
     if @@active_player.points == 0 || @@passive_player.points == 0 then
-      return @@active_game = false
+      @@active_game = false
     end
   end
   
@@ -39,25 +40,27 @@ class GameState
     n1 = rand(1..20)
     n2 = rand(1..20)
     correct_answer = n1 + n2
+
     
     
     puts "--- NEW TURN --- "
     puts "#{@@active_player.name} (Player #{@@active_player.player_id}): What is #{n1} + #{n2}?"
     @player_answer = Integer(gets.chomp)
-  
+    
     if @player_answer == correct_answer
       puts "You are correct!"
     elsif @player_answer != correct_answer
       puts "Wrong! lose a point"
       @@active_player.deduct_point
     end
+
+    game_status()
   end
 
   def start
-    while @@active_game = true do
-      check_win_condition()
+    while @@active_game == true
       seed_question()
-      game_status()
+      check_win_condition()
       next_turn(@@active_player, @@passive_player)
     end
     game_end()
