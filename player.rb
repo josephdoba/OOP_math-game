@@ -1,13 +1,11 @@
-# puts "Hello from player"
-
 class Player
   attr_accessor
   @@number_of_players = 0
 
-  def initialize(name)
+  def initialize(n, p)
     @@number_of_players += 1
-    @name = name
-    @points = 3
+    @name = n
+    @points = p
     @player_id = @@number_of_players
   end
   
@@ -30,6 +28,5 @@ class Player
   def player_info
     "Player #{player_id()} and has #{points()} point(s) remaining"
   end
-
 
 end

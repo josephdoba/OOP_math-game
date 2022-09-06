@@ -27,10 +27,9 @@ Thanks for playing!
 
 ## Player Class:
   - sets points total
-  - should be able to accept the users input (use `gets.chomp`)
-  - should hold how many points remaining
-  - should deduct points when an incorrect guess was made.
-  - should be able to check if the answer provided by the user was an integer.
+  - sets initial points hold how many points remaining
+  - sets 
+  - allows for `game-state.rb` to 
 
 ## Game-state Class:
   - should be able to generate numbers to add between 1-20 (use `rand(1..20)`).

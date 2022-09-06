@@ -1,10 +1,9 @@
-# puts "Hello from game-state"
 require "./player.rb"
 
 class GameState
   # Player setup:
-  @@jacob = Player.new("Jacob")
-  @@coleen = Player.new("Coleen")
+  @@jacob = Player.new("Jacob", 3)
+  @@coleen = Player.new("Coleen", 3)
   @@active_player = @@jacob
   @@passive_player = @@coleen
   
@@ -41,8 +40,6 @@ class GameState
     n2 = rand(1..20)
     correct_answer = n1 + n2
 
-    
-    
     puts "--- NEW TURN --- "
     puts "#{@@active_player.name} (Player #{@@active_player.player_id}): What is #{n1} + #{n2}?"
     @player_answer = Integer(gets.chomp)
@@ -53,7 +50,6 @@ class GameState
       puts "Wrong! lose a point"
       @@active_player.deduct_point
     end
-
     game_status()
   end
 
